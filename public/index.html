@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pawiwahan</title>
+  <meta name="theme-color" content="#1c120b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Javanese:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/gunungan-sm.webp" type="image/webp" />
+  <link rel="preload" as="image" href="images/gunungan.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <!-- ============ SAMPUL (COVER) ============ -->
+  <section id="cover" class="cover">
+    <div class="cover-bg kawung-gold"></div>
+    <div class="cover-inner">
+      <p class="aksara cover-aksara" data-text="cover.greeting"></p>
+      <img class="gunungan cover-gunungan" src="images/gunungan.webp" alt="Gunungan wayang kulit" />
+      <p class="eyebrow gold" data-text="brand"></p>
+      <h1 class="cover-names" data-names></h1>
+      <p class="cover-date" data-date="long"></p>
+      <div class="cover-guest">
+        <p class="eyebrow">Dhumateng</p>
+        <p class="guest-name" id="guestName"></p>
+      </div>
+      <button class="btn btn-gold" id="openBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        Bukak Serat Ulem
+      </button>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ============ HERO / SAVE THE DATE ============ -->
+    <section class="hero" id="top">
+      <div class="hero-bg" data-photo="hero.photo"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner reveal">
+        <p class="eyebrow gold" data-text="hero.caption"></p>
+        <p class="aksara hero-aksara" data-text="couple.aksara"></p>
+        <h2 class="display light" data-names="stack"></h2>
+        <p class="hero-date" data-date="long"></p>
+        <div class="countdown" id="countdown">
+          <div><b data-cd="d">00</b><span>Dinten</span></div>
+          <div><b data-cd="h">00</b><span>Jam</span></div>
+          <div><b data-cd="m">00</b><span>Menit</span></div>
+          <div><b data-cd="s">00</b><span>Detik</span></div>
+        </div>
+        <figure class="proverb">
+          <blockquote data-text="hero.proverb"></blockquote>
+          <figcaption data-text="hero.proverbMeaning"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="jarik" aria-hidden="true"></div>
+
+    <!-- ============ ATUR PAMBAGYA (PEMBUKA) ============ -->
+    <section class="sec sec-paper center">
+      <div class="wrap slim reveal">
+        <img class="gunungan gunungan-mini" src="images/gunungan-sm.webp" alt="" loading="lazy" />
+        <p class="eyebrow">Atur Pambagya</p>
+        <h2 class="title" data-text="opening.salam"></h2>
+        <p class="lead jv" data-text="opening.text"></p>
+        <p class="sub" data-text="opening.translation"></p>
+        <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+        <blockquote class="quote">
+          <p data-text="opening.quote"></p>
+          <cite data-text="opening.quoteSource"></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ SANG PENGANTEN (MEMPELAI) ============ -->
+    <section class="sec sec-cream kawung-bg" id="couple">
+      <div class="wrap">
+        <header class="sec-head center reveal">
+          <p class="eyebrow">Sang Penganten</p>
+          <h2 class="title big">Kalih Dados Setunggal</h2>
+          <p class="sub">Dua insan, satu tekad, satu langkah menuju bebrayan agung.</p>
+        </header>
+        <div class="couple-grid">
+          <article class="person reveal">
+            <div class="frame"><div class="frame-photo"><img data-photo="couple.groom.photo" alt="Mempelai kakung" /></div></div>
+            <p class="eyebrow gold-dark">Penganten Kakung</p>
+            <h3 class="person-name" data-text="couple.groom.name"></h3>
+            <p class="person-parents" data-text="couple.groom.parents"></p>
+          </article>
+          <div class="couple-amp reveal" aria-hidden="true">
+            <img class="gunungan" src="images/gunungan-sm.webp" alt="" loading="lazy" />
+            <span>lan</span>
+          </div>
+          <article class="person reveal">
+            <div class="frame"><div class="frame-photo"><img data-photo="couple.bride.photo" alt="Mempelai putri" /></div></div>
+            <p class="eyebrow gold-dark">Penganten Putri</p>
+            <h3 class="person-name" data-text="couple.bride.name"></h3>
+            <p class="person-parents" data-text="couple.bride.parents"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LELAMPAHAN TRESNA (KISAH) ============ -->
+    <section class="sec sec-dark batik-dark" id="story-sec">
+      <div class="wrap slim">
+        <header class="sec-head center reveal">
+          <p class="eyebrow gold">Lelampahan Tresna</p>
+          <h2 class="title big light">Perjalanan Kisah Kami</h2>
+        </header>
+        <ol class="story" id="story"></ol>
+      </div>
+    </section>
+
+    <!-- ============ RANTAMAN ADAT ============ -->
+    <section class="sec sec-paper" id="rituals-sec">
+      <div class="wrap">
+        <header class="sec-head center reveal">
+          <p class="eyebrow">Rantaman Adicara Adat</p>
+          <h2 class="title big">Laku Pawiwahan Jawi</h2>
+          <p class="sub">Rangkaian upacara adat Jawa yang kami jalani, sarat makna dan doa.</p>
+        </header>
+        <ol class="rituals" id="rituals"></ol>
+      </div>
+    </section>
+
+    <!-- ============ ADICARA (ACARA) ============ -->
+    <section class="sec sec-photo" id="events-sec">
+      <div class="sec-photo-bg" style="background-image:url('images/joglo.jpg')"></div>
+      <div class="wrap">
+        <header class="sec-head center reveal">
+          <p class="eyebrow gold">Adicara</p>
+          <h2 class="title big light">Wekdal lan Papan</h2>
+          <p class="sub light">Kawula ngaturaken agunging panuwun menawi panjenengan kersa rawuh.</p>
+        </header>
+        <div class="events" id="events"></div>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section class="sec sec-cream kawung-bg" id="gallery-sec">
+      <div class="wrap">
+        <header class="sec-head center reveal">
+          <p class="eyebrow">Kenangan</p>
+          <h2 class="title big">Galeri</h2>
+        </header>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <div class="jarik" aria-hidden="true"></div>
+
+    <!-- ============ ATUR PANGESTU (RSVP + GUESTBOOK) ============ -->
+    <section class="sec sec-paper" id="rsvp">
+      <div class="wrap slim">
+        <header class="sec-head center reveal">
+          <p class="eyebrow">Atur Pangestu</p>
+          <h2 class="title big">Konfirmasi Kehadiran</h2>
+          <p class="sub">Rawuh lan donga pangestu panjenengan dados kabagyan ingkang tanpa upami.</p>
+        </header>
+
+        <form class="rsvp reveal" id="rsvpForm" novalidate>
+          <label class="field">
+            <span>Asma / Nama</span>
+            <input name="name" id="rsvpName" maxlength="60" autocomplete="name" required />
+          </label>
+          <div class="field">
+            <span>Konfirmasi kehadiran</span>
+            <div class="choice">
+              <label><input type="radio" name="attendance" value="hadir" /><em>Badhe Rawuh</em></label>
+              <label><input type="radio" name="attendance" value="tidak" /><em>Nyuwun Pangapunten</em></label>
+            </div>
+          </div>
+          <label class="field" id="guestsField">
+            <span>Jumlah tamu</span>
+            <select name="guests">
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4">4 orang</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Donga & ucapan</span>
+            <textarea name="message" rows="4" maxlength="500" placeholder="Tuliskan doa restu untuk kedua mempelai…"></textarea>
+          </label>
+          <p class="form-msg" id="rsvpMsg" role="status"></p>
+          <button class="btn btn-sogan" type="submit">Kirim Donga Pangestu</button>
+        </form>
+
+        <div class="guestbook reveal">
+          <div class="gb-head">
+            <p class="eyebrow">Pandonga</p>
+            <h3 class="title">Doa & Ucapan</h3>
+            <p class="gb-stats" id="gbStats"></p>
+          </div>
+          <ul class="wishes" id="wishes"></ul>
+          <button class="btn btn-ghost" id="moreWishes" type="button" hidden>Lihat lebih banyak</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TANDA KATRESNAN (HADIAH) ============ -->
+    <section class="sec sec-photo" id="gift">
+      <div class="sec-photo-bg" style="background-image:url('images/saron.jpg')"></div>
+      <div class="wrap">
+        <header class="sec-head center reveal">
+          <p class="eyebrow gold">Tanda Katresnan</p>
+          <h2 class="title big light">Kado Pernikahan</h2>
+          <p class="sub light">Doa restu Anda adalah kado terindah. Namun bila ingin berbagi tanda kasih, kami menerimanya dengan penuh syukur.</p>
+        </header>
+        <div class="gifts" id="gifts"></div>
+      </div>
+    </section>
+
+    <!-- ============ PANUTUP (PENUTUP) ============ -->
+    <footer class="closing">
+      <div class="closing-bg" style="background-image:url('images/cover.jpg')"></div>
+      <div class="wrap slim center reveal">
+        <p class="aksara closing-aksara" data-text="closingAksara"></p>
+        <p class="eyebrow gold">Matur Nuwun</p>
+        <h2 class="display light" data-names></h2>
+        <p class="closing-text" data-text="closing"></p>
+        <p class="closing-sub" data-text="closingTranslation"></p>
+        <div class="ornament light" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="credits">Made with pride · HEAVEN · <a href="kredit.html">Kredit aset</a></p>
+        <a class="wa-tag" id="waTag" target="_blank" rel="noopener" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          <span></span>
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Music toggle -->
+  <button class="music" id="musicBtn" type="button" aria-label="Putar / jeda gending" hidden>
+    <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+    <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor"/></svg>
+  </button>
+  <audio id="bgm" loop preload="none"></audio>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" type="button" aria-label="Tutup">×</button>
+    <button class="lb-nav prev" type="button" aria-label="Sebelumnya">‹</button>
+    <img alt="" />
+    <button class="lb-nav next" type="button" aria-label="Berikutnya">›</button>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script type="module" src="js/db.js"></script>
+</body>
+</html>
