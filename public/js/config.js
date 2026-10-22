@@ -14,12 +14,12 @@ window.INVITATION = {
     groom: {
       name: 'Raden Bagas Wicaksono, S.T.',
       parents: 'Putra kaping kalih saking Bapak Suryo Hadiningrat lan Ibu Rahayu Lestari',
-      photo: 'images/groom.jpg',
+      photo: 'img-undangan/61d0d79a7753b69f3e143795836a8153.jpg',
     },
     bride: {
       name: 'Sekar Ayu Kinasih, S.Pd.',
       parents: 'Putri pambajeng saking Bapak Hartono Prawiro lan Ibu Sri Wahyuni',
-      photo: 'images/bride.jpg',
+      photo: 'img-undangan/a843abd1f4f511a3b717402a0b48a006.jpg',
     },
   },
 
@@ -32,7 +32,7 @@ window.INVITATION = {
   },
 
   hero: {
-    photo: 'images/hero.jpg',
+    photo: 'img-undangan/45c3f0078259ab963014c4d835a8c48e.jpg',
     caption: 'Pawiwahan Ageng',
     // Paribasan Jawa + terjemahan
     proverb: 'Witing tresna jalaran saka kulina',
@@ -99,12 +99,12 @@ window.INVITATION = {
   ],
 
   gallery: [
-    'images/gallery-gunungan.jpg',
-    'images/gallery-joglo-pencu.jpg',
-    'images/gallery-gamelan.jpg',
-    'images/gallery-kembar-mayang.jpg',
-    'images/gallery-keraton.jpg',
-    'images/melati.jpg',
+    'img-undangan/45c3f0078259ab963014c4d835a8c48e.jpg',
+    'img-undangan/d0defbbc7f6b72c5f8f8f7620ad5691a.jpg',
+    'img-undangan/a751177140d9a863db5f558a5c12d23a.jpg',
+    'img-undangan/6fe3e4aa5d48be2166de719e3831f568.jpg',
+    'img-undangan/af8229644236640067d2be790fe9a79a.jpg',
+    'img-undangan/a843abd1f4f511a3b717402a0b48a006.jpg',
   ],
 
   gift: {
